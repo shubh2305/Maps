@@ -1,38 +1,86 @@
+* {
+  outline: none;
+}
+
+body {
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+  overflow-x: hidden;
+}
+
 .App {
-  text-align: center;
+  margin: auto;
+  width: 100vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input-wrapper {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.btn {
+  background-color: #8f00ff;
+  border: 0 solid #8f00ff;
+  width: 30%;
+  min-width: 45px;
+  margin: 20px 0 0 0;
+  color: #fff;
+  font-size: 20px;
+  border-radius: 50px;
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.enter-location {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  width: 60vw;
+  margin: 3% auto;
+  position: relative;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+#enter-location {
+  margin-top: 0;
+  background-color: white;
+  height: 5vh;
+  width: 80%;
+  min-width: 280px;
+  min-height: 30px;
+  border: 2px solid #8f00ff;
+  border-radius: 50px;
+  font-size: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#enter-location,
+label {
+  padding: 2vh 4vh;
+}
+
+#enter-location:focus {
+  outline: none;
+}
+
+.leaflet-container {
+  width: 75vw;
+  height: 100vh;
+  margin: 3% auto;
+  position: relative;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 1);
+}
+
+.close {
+  z-index: 1000;
+  width: fit-content !important;
+  background-color: #fff;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  padding: 1% 1%;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+h2 {
+  margin: 0;
 }
